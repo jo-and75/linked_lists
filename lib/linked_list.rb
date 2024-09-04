@@ -7,6 +7,16 @@ class LinkedList
       @next_node.next = entry 
       @next_node = entry
     end
+  end 
+
+  def prepend(entry) 
+    if @value == nil 
+      @value = entry 
+      @next_node = entry 
+    else 
+      entry.next = @value 
+      @value = entry 
+    end
   end
 end
 
