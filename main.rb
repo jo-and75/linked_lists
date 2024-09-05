@@ -8,3 +8,5 @@ list.append('parrot')
 list.append('hamster')
 list.append('snake')
 list.append('turtle')
+
+puts list.access_head

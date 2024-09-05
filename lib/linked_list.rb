@@ -33,9 +33,17 @@ class LinkedList
   end
 
   def access_head
-    return @head unless @head.nil?
+    return @head.value unless @head.nil?
 
     puts 'No head present.'
+  end
+
+  def access_tail(list)
+    puts 'List is empty.' if list.nil?
+
+    return list if list.next_node.nil?
+
+    access_tail(list.next_node)
   end
 
   class Node
