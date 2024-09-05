@@ -26,13 +26,10 @@ class LinkedList
     end
   end
 
-  def size(list, count = 0)
-    return count if list.nil?
+  def size(list)
+    return 0 if list.nil?
 
-    count += 1
-    size(list.next_node)
-
-    count
+    1 + size(list.next_node)
   end
 
   class Node
