@@ -32,6 +32,12 @@ class LinkedList
     1 + size(list.next_node)
   end
 
+  def access_head
+    return @head unless @head.nil?
+
+    puts 'No head present.'
+  end
+
   class Node
     attr_accessor :value, :next_node
 
