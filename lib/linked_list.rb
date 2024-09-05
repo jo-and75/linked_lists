@@ -1,29 +1,14 @@
-class LinkedList 
-  def append(entry) 
-    if @value == nil 
-      @value = entry  
-      @next_node = entry
-    else 
-      @next_node.next = entry 
-      @next_node = entry
-    end
-  end 
-
-  def prepend(entry) 
-    if @value == nil 
-      @value = entry 
-      @next_node = entry 
-    else 
-      entry.next = @value 
-      @value = entry 
-    end
-  end
-end
-
-class Node 
-  attr_accessor :value , :next_node
+class LinkedList
   def initialize
-    @value = nil
-    @next_node = nil
+    @head = nil
+  end
+
+  class Node
+    attr_accessor :value, :next_node
+
+    def initialize(value, nextNode)
+      @value = value
+      @next_node = nextNode
+    end
   end
 end
