@@ -41,7 +41,7 @@ class LinkedList
   def access_tail(list)
     puts 'List is empty.' if list.nil?
 
-    return list if list.next_node.nil?
+    return list.value if list.next_node.nil?
 
     access_tail(list.next_node)
   end
