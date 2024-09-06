@@ -61,7 +61,7 @@ class LinkedList
     curr.value
   end
 
-  def pop(list_node)
+  def pop(list_node = @head)
     return nil if list_node.nil? || list_node.next_node.nil?
 
     second_last = @head
