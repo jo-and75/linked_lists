@@ -96,7 +96,7 @@ class LinkedList
     if node.nil?
       print ' nil '
     else
-      print "#{node.value} -> "
+      print "(#{node.value}) -> "
       to_string(node.next_node)
     end
   end
