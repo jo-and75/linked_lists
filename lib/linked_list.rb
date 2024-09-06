@@ -26,7 +26,7 @@ class LinkedList
     end
   end
 
-  def size(list)
+  def size(list = @head)
     return 0 if list.nil?
 
     1 + size(list.next_node)
