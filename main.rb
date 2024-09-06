@@ -9,4 +9,4 @@ list.append('hamster')
 list.append('snake')
 list.append('turtle')
 
-puts list.access_tail(list.head)
+puts list.at(-1)

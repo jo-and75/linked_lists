@@ -46,6 +46,21 @@ class LinkedList
     access_tail(list.next_node)
   end
 
+  def at(index)
+    count = 0
+    curr = @head
+
+    until curr.nil?
+      break if count == index
+
+      curr = curr.next_node
+      count += 1
+    end
+    return nil.inspect if curr.nil?
+
+    curr.value
+  end
+
   class Node
     attr_accessor :value, :next_node
 
