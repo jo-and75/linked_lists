@@ -61,6 +61,16 @@ class LinkedList
     curr.value
   end
 
+  def pop(list_node)
+    return nil if list_node.nil? || list_node.next_node.nil?
+
+    second_last = @head
+    second_last = second_last.next_node until second_last.next_node.next_node.nil?
+    second_last.next_node = nil
+
+    second_last.value
+  end
+
   class Node
     attr_accessor :value, :next_node
 
