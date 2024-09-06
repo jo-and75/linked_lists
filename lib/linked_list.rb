@@ -81,6 +81,17 @@ class LinkedList
     end
   end
 
+  def find(elem, head = @head, count = 0)
+    if head.nil?
+      nil
+    elsif head.value == elem
+      count
+    else
+      count += 1
+      find(elem, head.next_node, count)
+    end
+  end
+
   class Node
     attr_accessor :value, :next_node
 
