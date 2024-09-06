@@ -38,8 +38,8 @@ class LinkedList
     puts 'No head present.'
   end
 
-  def access_tail(list)
-    puts 'List is empty.' if list.nil?
+  def access_tail(list = @head)
+    return nil.inspect if list.nil?
 
     return list.value if list.next_node.nil?
 
