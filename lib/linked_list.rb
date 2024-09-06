@@ -92,6 +92,15 @@ class LinkedList
     end
   end
 
+  def to_string(node = @head)
+    if node.nil?
+      print ' nil '
+    else
+      print "#{node.value} -> "
+      to_string(node.next_node)
+    end
+  end
+
   class Node
     attr_accessor :value, :next_node
 
