@@ -71,6 +71,16 @@ class LinkedList
     second_last.value
   end
 
+  def contains(elem, head = @head)
+    if head.nil?
+      false
+    elsif head.value == elem
+      true
+    else
+      contains(elem, head.next_node)
+    end
+  end
+
   class Node
     attr_accessor :value, :next_node
 
